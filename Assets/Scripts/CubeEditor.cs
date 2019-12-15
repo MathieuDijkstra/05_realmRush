@@ -4,41 +4,60 @@ using UnityEngine;
 
 [ExecuteInEditMode]
 [SelectionBase]
+[RequireComponent(typeof(Waypoint))]// if waypoint is not on game object add it it to object
 public class CubeEditor : MonoBehaviour
 {
-    [SerializeField] [Range (1f, 20f)] float gridSize = 10f;
-    TextMesh textMesh;
+    //[SerializeField] [Range (1f, 20f)] float gridSize = 10f;
+   
+    //TextMesh textMesh;
     GameObject GameObject;
+    Waypoint waypoint;
+    //Vector3 gridPos;
+    int gridSize;
     // Start is called before the first frame update
     void Awake()
     {
+        waypoint = GetComponent<Waypoint>();
+
         Debug.Log("editor coused this awake");
+        gridSize = waypoint.GetGridSize();
     }
 
-    private void Start()
-    {
 
-
-
-    }
     // Update is called once per frame
     void Update()
     {
+        //       Debug.Log("editor coused this update");
+        snapToGrid();
+        UpdateLable(new Vector3(
+            waypoint.GetGridPosV3().x,
+            waypoint.GetGridPosV3().y,
+            waypoint.GetGridPosV3().z
+            ));
+    }
 
- //       Debug.Log("editor coused this update");
-        Vector3 snapPos;
-        snapPos.x = Mathf.RoundToInt(transform.position.x /gridSize) * gridSize;
-  //      Debug.Log(snapPos.x);
+    private void snapToGrid()
+    {
+        //gridPos.x = Mathf.RoundToInt(transform.position.x / gridSize) * gridSize;
+        //      Debug.Log(snapPos.x);
 
-        snapPos.y = Mathf.RoundToInt(transform.position.y / gridSize) * gridSize;
- //       Debug.Log(snapPos.y);
+        //gridPos.y = Mathf.RoundToInt(transform.position.y /gridSize) *gridSize;
+        //       Debug.Log(snapPos.y);
 
-        snapPos.z = Mathf.RoundToInt(transform.position.z / gridSize) * gridSize;
-  //      Debug.Log(snapPos.z);
-        this.transform.position = new Vector3(snapPos.x, snapPos.y, snapPos.z);
-        textMesh = GetComponentInChildren<TextMesh>();
-        string labelText = snapPos.x/gridSize+","+snapPos.z/gridSize;
+        //gridPos.z = Mathf.RoundToInt(transform.position.z /gridSize) *gridSize;
+        //      Debug.Log(snapPos.z);
+        this.transform.position = new Vector3(
+            waypoint.GetGridPosV3().x, 
+            waypoint.GetGridPosV3().y, 
+            waypoint.GetGridPosV3().z);
+        return;
+    }
+
+    private void UpdateLable(Vector3 gridPos)
+    {
+        TextMesh textMesh = GetComponentInChildren<TextMesh>();
+        string labelText = gridPos.x /gridSize + "," + gridPos.z /gridSize;
         textMesh.text = labelText;
-        this.gameObject.name = "cube "+labelText;
+        this.gameObject.name = "cube " + labelText;
     }
 }
