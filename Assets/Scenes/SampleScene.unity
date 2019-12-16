@@ -175,7 +175,7 @@ PrefabInstance:
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
@@ -466,7 +466,7 @@ PrefabInstance:
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
@@ -733,7 +733,7 @@ PrefabInstance:
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
@@ -807,7 +807,7 @@ PrefabInstance:
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
@@ -881,7 +881,7 @@ PrefabInstance:
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
@@ -955,7 +955,7 @@ PrefabInstance:
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
@@ -1029,7 +1029,7 @@ PrefabInstance:
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
@@ -1121,7 +1121,7 @@ PrefabInstance:
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
@@ -1168,17 +1168,17 @@ Transform:
   m_LocalPosition: {x: 10.238378, y: -45.58966, z: -6.786484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 759241972}
   - {fileID: 867555832}
   - {fileID: 385833316}
   - {fileID: 642995563}
   - {fileID: 1577406544}
   - {fileID: 1136340997}
   - {fileID: 743013504}
-  - {fileID: 579131634}
   - {fileID: 938199271}
   - {fileID: 512736619}
+  - {fileID: 579131634}
   - {fileID: 220607108}
-  - {fileID: 759241972}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1194,6 +1194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4a1cc8a57c4914487da4bd52bd1af2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartWaypoint: {fileID: 759241973}
+  EndWaypoint: {fileID: 220607109}
 --- !u!4 &1577406544 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
@@ -1272,7 +1274,7 @@ PrefabInstance:
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6670852744448037676, guid: 3dd67968f4491754eb3aeae4295a0ea0,
         type: 3}
@@ -1395,17 +1397,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path:
+  - {fileID: 759241973}
   - {fileID: 867555834}
   - {fileID: 385833318}
   - {fileID: 642995565}
   - {fileID: 1577406546}
   - {fileID: 1136340999}
   - {fileID: 743013502}
-  - {fileID: 579131635}
   - {fileID: 938199272}
   - {fileID: 512736620}
+  - {fileID: 579131635}
   - {fileID: 220607109}
-  - {fileID: 759241973}
 --- !u!4 &1830337248
 Transform:
   m_ObjectHideFlags: 0

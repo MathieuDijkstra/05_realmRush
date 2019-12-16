@@ -5,6 +5,8 @@ using UnityEngine;
 [ExecuteInEditMode]
 [SelectionBase]
 [RequireComponent(typeof(Waypoint))]// if waypoint is not on game object add it it to object
+
+
 public class CubeEditor : MonoBehaviour
 {
     //[SerializeField] [Range (1f, 20f)] float gridSize = 10f;
@@ -12,6 +14,8 @@ public class CubeEditor : MonoBehaviour
     //TextMesh textMesh;
     GameObject GameObject;
     Waypoint waypoint;
+
+
     //Vector3 gridPos;
     int gridSize;
     // Start is called before the first frame update
@@ -19,7 +23,7 @@ public class CubeEditor : MonoBehaviour
     {
         waypoint = GetComponent<Waypoint>();
 
-        Debug.Log("editor coused this awake");
+    //    Debug.Log("editor coused this awake");
         gridSize = waypoint.GetGridSize();
     }
 
