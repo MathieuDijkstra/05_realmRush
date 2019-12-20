@@ -21,14 +21,15 @@ public class PathFinder : MonoBehaviour
         Waypoint[] waypoints = FindObjectsOfType<Waypoint>();// must get all objects
         foreach(Waypoint pointerWaypoints in waypoints) 
         {
-            bool isoverlapping = grid.ContainsKey(pointerWaypoints.GetGridPosV3());
+            float waypointsValue = pointerWaypoints.GetGridSize();
+            bool isoverlapping = grid.ContainsKey(pointerWaypoints.GetGridPosV3()*waypointsValue);
             if (isoverlapping)
             {
                 Debug.LogWarning("skipping overlapping block : " + pointerWaypoints);
             }
             else
             {
-                grid.Add(pointerWaypoints.GetGridPosV3(), pointerWaypoints);
+                grid.Add(pointerWaypoints.GetGridPosV3()*waypointsValue, pointerWaypoints);
                 pointerWaypoints.SetTopColor(Color.black);
             }
         }

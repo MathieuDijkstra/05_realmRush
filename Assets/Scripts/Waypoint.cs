@@ -5,10 +5,10 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour
 {
     Vector2Int gridPos;
-    const int gridSize = 10;
+    const float gridSize = 10.0f;
     // Start is called before the first frame update
 
-    public int GetGridSize() 
+    public float GetGridSize() 
     {
         return gridSize;
     }
@@ -23,9 +23,9 @@ public class Waypoint : MonoBehaviour
 
         //      Debug.Log(snapPos.z);
         return new Vector3(
-             Mathf.RoundToInt(transform.position.x / gridSize) * gridSize,
-             Mathf.RoundToInt(transform.position.y / gridSize) * gridSize,
-             Mathf.RoundToInt(transform.position.z / gridSize) * gridSize
+             Mathf.RoundToInt(transform.position.x) ,
+             Mathf.RoundToInt(transform.position.y) ,
+             Mathf.RoundToInt(transform.position.z) 
             );
     }
 

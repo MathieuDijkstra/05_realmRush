@@ -17,7 +17,7 @@ public class CubeEditor : MonoBehaviour
 
 
     //Vector3 gridPos;
-    int gridSize;
+    float gridSize;
     // Start is called before the first frame update
     void Awake()
     {
@@ -34,9 +34,10 @@ public class CubeEditor : MonoBehaviour
         //       Debug.Log("editor coused this update");
         snapToGrid();
         UpdateLable(new Vector3(
-            waypoint.GetGridPosV3().x,
-            waypoint.GetGridPosV3().y,
-            waypoint.GetGridPosV3().z
+            waypoint.GetGridPosV3().x*waypoint.GetGridSize(),
+            waypoint.GetGridPosV3().y*waypoint.GetGridSize(),
+            waypoint.GetGridPosV3().z*waypoint.GetGridSize()
+
             ));
     }
 
@@ -51,10 +52,11 @@ public class CubeEditor : MonoBehaviour
         //gridPos.z = Mathf.RoundToInt(transform.position.z /gridSize) *gridSize;
         //      Debug.Log(snapPos.z);
         this.transform.position = new Vector3(
-            waypoint.GetGridPosV3().x, 
-            waypoint.GetGridPosV3().y, 
-            waypoint.GetGridPosV3().z);
-        return;
+            waypoint.GetGridPosV3().x*waypoint.GetGridSize(), 
+            waypoint.GetGridPosV3().y*waypoint.GetGridSize(), 
+            waypoint.GetGridPosV3().z*waypoint.GetGridSize()
+            );
+        print(waypoint.GetGridSize());
     }
 
     private void UpdateLable(Vector3 gridPos)
